@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:binding="http://www.gueei.com/android-binding/"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	>
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="身長"
+		/>
+	<EditText
+		android:id="@+id/height"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:inputType="numberDecimal"
+		/>
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="体重"
+		/>
+	<EditText
+		android:id="@+id/weight"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:inputType="numberDecimal"
+		/>
+
+	<Button
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="計算"
+		binding:onClick="Calculate"
+		/>
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		binding:text="BMI"
+		/>
+</LinearLayout>
