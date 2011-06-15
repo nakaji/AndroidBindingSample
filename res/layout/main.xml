@@ -38,6 +38,7 @@
 		/>
 
 	<TextView
+		android:id="@+id/buttonCalculateBMI"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		binding:text="BMI"
