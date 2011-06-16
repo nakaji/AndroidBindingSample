@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class AndroidBindingSampleActivity extends Activity implements PojoViewModel {
+public class BMIActivity extends Activity implements PojoViewModel {
 
     private PojoViewModelHelper helper = new PojoViewModelHelper();
 
