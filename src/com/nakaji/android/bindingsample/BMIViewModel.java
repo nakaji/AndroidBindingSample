@@ -1,42 +1,27 @@
 package com.nakaji.android.bindingsample;
 
-import gueei.binding.pojo.PojoViewModel;
-import gueei.binding.pojo.PojoViewModelHelper;
+import gueei.binding.Command;
+import gueei.binding.observables.DoubleObservable;
+import gueei.binding.observables.StringObservable;
+import android.view.View;
 
-public class BMIViewModel implements PojoViewModel {
+public class BMIViewModel {
 
-    private PojoViewModelHelper helper = new PojoViewModelHelper();
-    private double bmi;
-    private double height;
-    private double weight;
+    public DoubleObservable BMI = new DoubleObservable();
+    public StringObservable height = new StringObservable();
+    public StringObservable weight = new StringObservable();
 
-    public PojoViewModelHelper getHelper() {
-        return helper;
-    }
+    public Command Calculate = new Command() {
 
-    public void notifyPropertyChanged(String propertyName) {
-        helper.notifyPropertyChanged(propertyName);
-    }
-
-    public void Calculate() {
-        double bmi = weight / Math.pow(height / 100.0, 2);
-        setBMI(bmi);
+        @Override
+        public void Invoke(View arg0, Object... arg1) {
+            Calculate();
+        }
     };
 
-    public void setBMI(double bmi) {
-        this.bmi = bmi;
-        notifyPropertyChanged("BMI");
-    }
+    private void Calculate() {
+        double bmi = Double.parseDouble(weight.get()) / Math.pow(Double.parseDouble(height.get()) / 100.0, 2);
+        BMI.set(bmi);
+    };
 
-    public String getBMI() {
-        return "Your BMI is " + String.valueOf(bmi);
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
 }
