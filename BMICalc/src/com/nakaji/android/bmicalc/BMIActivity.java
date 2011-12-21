@@ -1,4 +1,6 @@
-package com.nakaji.android.bindingsample;
+package com.nakaji.android.bmicalc;
+
+import com.nakaji.android.bindingsample.R;
 
 import gueei.binding.Binder;
 import android.app.Activity;

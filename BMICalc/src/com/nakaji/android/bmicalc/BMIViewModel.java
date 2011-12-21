@@ -1,4 +1,4 @@
-package com.nakaji.android.bindingsample;
+package com.nakaji.android.bmicalc;
 
 import gueei.binding.Command;
 import gueei.binding.observables.DoubleObservable;
