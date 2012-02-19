@@ -15,10 +15,10 @@ public class BMIViewModelTest {
 
     @Test
     public void Calc() {
-        viewModel.height.set("172");
-        viewModel.weight.set("60");
+        viewModel.Height.set("172");
+        viewModel.Weight.set("60");
         viewModel.Calculate.Invoke(null, (Object[]) null);
 
-        Assert.assertEquals(60 / Math.pow(172 / 100.0, 2), viewModel.BMI.get());
+        Assert.assertEquals("20.28", viewModel.BMI.get());
     }
 }

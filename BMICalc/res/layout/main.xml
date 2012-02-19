@@ -12,11 +12,10 @@
 		android:text="身長"
 		/>
 	<EditText
-		android:id="@+id/height"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:inputType="numberDecimal"
-		binding:text="height"
+		binding:text="Height"
 		/>
 
 	<TextView
@@ -25,11 +24,10 @@
 		android:text="体重"
 		/>
 	<EditText
-		android:id="@+id/weight"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:inputType="numberDecimal"
-		binding:text="weight"
+		binding:text="Weight"
 		/>
 
 	<Button
