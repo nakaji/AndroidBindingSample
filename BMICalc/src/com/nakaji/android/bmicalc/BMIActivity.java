@@ -1,12 +1,12 @@
 package com.nakaji.android.bmicalc;
 
-import com.nakaji.android.bindingsample.R;
-
 import gueei.binding.Binder;
-import android.app.Activity;
+import gueei.binding.app.BindingActivity;
 import android.os.Bundle;
 
-public class BMIActivity extends Activity {
+import com.nakaji.android.bindingsample.R;
+
+public class BMIActivity extends BindingActivity {
 
     private BMIViewModel viewModel = new BMIViewModel();
 
@@ -16,6 +16,6 @@ public class BMIActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         Binder.init(this.getApplication());
-        Binder.setAndBindContentView(this, R.layout.main, viewModel);
+        setAndBindRootView(R.layout.main, viewModel);
     }
 }
